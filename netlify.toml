@@ -1,0 +1,18 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# ─── 참고 ─────────────────────────────────────────────────────────────────
+# @netlify/plugin-nextjs는 Next.js의 App Router, API Routes,
+# Edge Runtime(/api/generate)을 Netlify Functions/Edge Functions로
+# 자동 변환해줍니다. publish 디렉토리를 .next로 지정해도
+# 실제 서빙은 이 플러그인이 생성하는 .netlify 폴더 기준으로 처리됩니다.
+#
+# Netlify 대시보드에서 직접 설정할 경우:
+#   Build command: npm run build
+#   Publish directory: .next
+#   (플러그인은 Netlify UI의 "Plugins" 탭에서 검색 후 설치하거나,
+#    이 파일이 있으면 배포 시 자동으로 설치/적용됩니다.)
