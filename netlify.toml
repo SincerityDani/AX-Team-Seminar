@@ -1,0 +1,13 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Edge Function 타임아웃 최대치 설정 (Netlify 무료 플랜 허용 최대값)
+[functions]
+  timeout = 26
+
+[edge_functions]
+  timeout = 26
